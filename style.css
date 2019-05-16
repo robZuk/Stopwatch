@@ -7,26 +7,22 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
+  justify-content: center;
   background-color: #ffcb21;
   height: 100vh;
   font-family: monospace;
 }
 
 h1 {
-  position: relative;
+  position: absolute;
   text-transform: uppercase;
   top: 10%;
   left: 50%;
   transform: translate(-50%);
   text-align: center;
-  font-size: calc(32px + 1vw);
 }
 .circle {
   position: absolute;
-  width: calc(200px + 2vw);
-  height: calc(200px + 2vw);
   top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -41,7 +37,6 @@ h1 {
   left: 50%;
   max-width: 100%;
   transform: translate(-50%);
-  font-size: calc(30px + 0.8vw);
 }
 
 .buttons {
@@ -59,7 +54,6 @@ button {
   width: 25%;
   padding: 1%;
   text-align: center;
-  font-size: calc(10px + 1vw);
   text-transform: uppercase;
   border-radius: 10px;
   background-color: inherit;
@@ -76,8 +70,8 @@ p {
   display: none;
   position: absolute;
   top: 73%;
-  left: 0;
   width: 100%;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -91,175 +85,158 @@ p {
   width: 100%;
   text-align: center;
   list-style: none;
-  font-size: 15px;
 }
 
-@media (min-width: 360px) and (orientation: landscape) {
+/* @media all and (max-width: 1690px) { ...}
+@media all and (max-width: 1280px) { ...}
+@media all and (max-width: 980px) { ... }
+@media all and (max-width: 736px) { ... }
+@media all and (max-width: 480px) { ... } */
+
+@media (orientation: landscape) {
   h1 {
-    top: 7%;
-    font-size: calc(16px + 1vw);
+    top: 8%;
+    font-size: 3vw;
   }
 
   button {
-    width: 22%;
-    font-size: calc(10px + 1vw);
+    width: 20%;
+    font-size: 2vw;
   }
   .circle {
-    width: calc(90px + 4vw);
-    height: calc(90px + 4vw);
+    width: 18vw;
+    height: 18vw;
+    top: 50%;
   }
 
   .time {
-    font-size: calc(12px + 0.8vw);
+    font-size: 3vw;
+  }
+
+  p {
+    top: 70%;
+    font-size: 2.5vw;
+  }
+
+  .laps {
+    top: 77%;
+    font-size: 2vw;
+  }
+}
+@media (orientation: landscape) and (min-width: 670px) {
+  .circle {
+    width: 17vw;
+    height: 17vw;
+  }
+
+  .time {
+    font-size: 3vw;
+  }
+
+  .laps {
+    font-size: 2vw;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1030px) {
+  .circle {
+    top: 45%;
+    width: 15vw;
+    height: 15vw;
+  }
+
+  p {
+    top: 65%;
+    font-size: 2.5vw;
+  }
+
+  .laps {
+    top: 70%;
+    font-size: 2vw;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+  h1 {
+    font-size: 4vw;
+  }
+
+  .circle {
+    top: 50%;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .time {
+    font-size: 3vw;
   }
 
   p {
     top: 72%;
-    font-size: calc(12px + 1vw);
-  }
-
-  .laps {
-    top: 78%;
-    font-size: calc(10px + 1vw);
-  }
-}
-@media (orientation: landscape) and (min-width: 640px) {
-  .circle {
-    width: calc(130px + 1vw);
-    height: calc(130px + 1vw);
-  }
-
-  .time {
-    font-size: calc(22px + 0.8vw);
-  }
-  p {
-    top: 73%;
-    font-size: calc(12px + 1vw);
-  }
-
-  .laps {
-    top: 79%;
-    font-size: calc(10px + 1vw);
-  }
-}
-
-@media (orientation: landscape) and (min-width: 1024px) {
-  h1 {
-    font-size: calc(25px + 1vw);
-  }
-
-  .circle {
-    width: calc(200px + 1vw);
-    height: calc(200px + 1vw);
-  }
-
-  .time {
-    font-size: calc(30px + 0.8vw);
-  }
-
-  p {
-    top: 70%;
-  }
-}
-
-@media (orientation: landscape) and (min-width: 1280px) {
-  h1 {
-    font-size: calc(30px + 1vw);
-  }
-
-  .circle {
-    width: calc(250px + 1vw);
-    height: calc(250px + 1vw);
-  }
-
-  .time {
-    font-size: calc(35px + 0.8vw);
-  }
-
-  p {
-    top: 75%;
-    font-size: calc(16px + 1vw);
-  }
-  .laps {
-    top: 82%;
-    font-size: calc(14px + 1vw);
-  }
-}
-@media (orientation: landscape) and (min-width: 1600px) {
-  h1 {
-    font-size: calc(30px + 1vw);
-  }
-
-  .circle {
-    width: calc(250px + 3vw);
-    height: calc(250px + 3vw);
-  }
-
-  .time {
-    font-size: calc(38px + 0.8vw);
-  }
-
-  p {
-    top: 70%;
-    font-size: calc(16px + 1vw);
   }
 
   .laps {
     top: 77%;
-    font-size: calc(16px + 1vw);
   }
 }
 
-@media (orientation: portrait) and (min-width: 320px) {
+@media (orientation: portrait) {
   h1 {
-    font-size: calc(20px + 1vw);
+    font-size: 7vw;
   }
 
   .buttons {
-    width: 70vw;
-    left: 15vw;
-    right: 15vw;
+    width: 60vw;
+    top: 20%;
+    left: 20vw;
+    right: 20vw;
   }
+
   button {
     width: 28%;
 
-    font-size: calc(10px + 1vw);
+    font-size: 4vw;
   }
   .circle {
-    width: calc(180px + 4vw);
-    height: calc(180px + 4vw);
+    top: 50%;
+    width: 50vw;
+    height: 50vw;
   }
 
   .time {
-    font-size: calc(24px + 2vw);
+    font-size: 8vw;
+  }
+
+  p {
+    font-size: 5vw;
   }
 
   .laps {
     top: 77%;
-    font-size: calc(14px + 1vw);
+    font-size: 5vw;
   }
 }
 
 @media (orientation: portrait) and (min-width: 768px) {
   h1 {
-    font-size: calc(30px + 1vw);
+    font-size: 8vw;
   }
 
   .circle {
-    width: calc(250px + 4vw);
-    height: calc(250px + 4vw);
+    width: 40vw;
+    height: 40vw;
   }
 
   .time {
-    font-size: calc(30px + 2vw);
+    font-size: 7vw;
   }
 
   p {
-    font-size: calc(20px + 1vw);
+    font-size: 5vw;
   }
 
   .laps {
-    font-size: calc(18px + 1vw);
+    font-size: 4vw;
   }
 }
 
@@ -286,14 +263,5 @@ p {
 
   .laps {
     font-size: calc(25px + 1vw);
-  }
-}
-
-@media (orientation: portrait) {
-  .buttons {
-    width: 60vw;
-    top: 20%;
-    left: 20vw;
-    right: 20vw;
   }
 }
