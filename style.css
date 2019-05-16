@@ -104,8 +104,8 @@ p {
     font-size: 2vw;
   }
   .circle {
-    width: 18vw;
-    height: 18vw;
+    width: 30vh;
+    height: 30vh;
     top: 50%;
   }
 
@@ -125,8 +125,8 @@ p {
 }
 @media (orientation: landscape) and (min-width: 670px) {
   .circle {
-    width: 17vw;
-    height: 17vw;
+    width: 30vh;
+    height: 30vh;
   }
 
   .time {
@@ -140,9 +140,9 @@ p {
 
 @media (orientation: landscape) and (min-width: 1030px) {
   .circle {
-    top: 45%;
-    width: 15vw;
-    height: 15vw;
+    top: 48%;
+    width: 30vh;
+    height: 30vh;
   }
 
   p {
@@ -163,8 +163,8 @@ p {
 
   .circle {
     top: 50%;
-    width: 20vw;
-    height: 20vw;
+    width: 35vh;
+    height: 35vh;
   }
 
   .time {
