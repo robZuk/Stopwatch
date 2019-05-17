@@ -2,7 +2,7 @@
 const btnTime = document.querySelector(".main");
 const btnReset = document.querySelector(".reset");
 const btnLap = document.querySelector(".addLap");
-const panel = document.querySelector(".time");
+const panel = document.querySelector(".circle");
 const ul = document.querySelector(".laps");
 const p = document.querySelector("p");
 
