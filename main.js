@@ -12,10 +12,11 @@ let minutes = 0;
 let active = false;
 let idI;
 
+//function change button start/stop
 const timer = () => {
   if (active === false) {
     active = !active;
-    btnTime.textContent = "Pauza";
+    btnTime.textContent = "Stop";
     idI = setInterval(start, 10);
   } else {
     active = !active;
@@ -24,6 +25,7 @@ const timer = () => {
   }
 };
 
+//add time to circle
 const start = () => {
   miliseconds++;
   if (miliseconds > 99) {
@@ -38,6 +40,7 @@ const start = () => {
   }:${miliseconds < 10 ? `0${miliseconds}` : miliseconds}`;
 };
 
+//reset function
 const reset = () => {
   miliseconds = 0;
   seconds = 0;
@@ -51,6 +54,7 @@ const reset = () => {
   clearInterval(idI);
 };
 
+//add three last lap to circle
 const addLap = () => {
   const li = document.createElement("li");
   li.textContent = panel.innerHTML;
